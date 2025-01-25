@@ -4,4 +4,4 @@ A small web app to play with the different layers of music from our game [Infini
 
 [Deployed here](https://kuuro-neko.github.io/Infinite-Resonance-Music-Player/)
 
-Composed by [OhhnYx](https://soundcloud.com/user-753337666)
+Music composed by [OhhnYx](https://soundcloud.com/user-753337666)
