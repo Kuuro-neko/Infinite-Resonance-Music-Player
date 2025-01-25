@@ -344,3 +344,37 @@ input[type="range"]:active::-moz-range-progress {
 input[type="range"]:disabled::-moz-range-thumb {
 	cursor: not-allowed;
 }
+
+@media screen and (max-width: 1050px) {
+   #dummy {
+       display: none;
+   }
+
+   #buttons {
+       width: 75%;
+   }
+}
+
+@media screen and (max-width: 675px) {
+
+    #ctrl-container {
+        flex-direction: column;
+        height: 25%;
+    }
+
+    #ctrl-container > #dummy, #ctrl-container > #volume-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    #buttons {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #main {
+        margin: 0;
+        height: 100%;
+    }
+}
