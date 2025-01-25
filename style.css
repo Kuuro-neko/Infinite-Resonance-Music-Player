@@ -1,199 +1,164 @@
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #1e1e1e;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #1e1e1e
 }
-
 * {
-    overflow: hidden;
+	overflow: hidden
 }
-
 #main {
-    position: relative;
-    margin: 2%;
-    height: 92%;
-    border: 1px solid #000;
+	position: relative;
+	margin: 2%;
+	height: 92%;
+	border: 1px solid #000
 }
-
 #controls, #loader {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center
 }
-
 #controls {
-    display: flex;
-    flex-direction: column;
-    opacity: 1;
-    background-color: #252526;
+	display: flex;
+	flex-direction: column;
+	opacity: 1;
+	background-color: #252526
 }
-
 #loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    z-index: 1;
-    background-color: #252526;
-    pointer-events: none;
-    color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	z-index: 1;
+	background-color: #252526;
+	pointer-events: none;
+	color: #fff
 }
-
 .fade-out {
-    opacity: 0;
-    transition: opacity 0.25s ease-out;
+	opacity: 0;
+	transition: opacity 0.25s ease-out
 }
-
 #buttons {
-    display: flex;
-    display: row;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-
-    width: 50%;
+	display: flex;
+	display: row;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	width: 50%
 }
-
 #buttons > button {
-    margin: 0 10px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
+	margin: 0 10px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px
 }
-
 #ctrl-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    margin: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	margin: 10px
 }
-
 #ctrl-container > #dummy, #ctrl-container > #volume-container {
-    width: 25%;
-    margin: 0 2%;
+	width: 25%;
+	margin: 0 2%
 }
-
 button, .btn-icon {
-    cursor: pointer !important;
+	cursor: pointer !important
 }
-
 .btn-icon, .vol-icon {
-    height: 50px !important;
-    margin: 5px;
+	height: 50px !important;
+	margin: 5px
 }
-
 .btn-activated {
-    background-color: #8a8a8a !important;
+	background-color: #8a8a8a !important
 }
-
 #gui {
-    height: 100%;
-    width: 100%;
+	height: 100%;
+	width: 100%
 }
-
 #layers-container {
-    height: 96%;
-    width: 100%;
-    background-color: #252526;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    box-shadow: 0 0 10px 5px #000;
+	height: 96%;
+	width: 100%;
+	background-color: #252526;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	box-shadow: 0 0 10px 5px #000
 }
-
 #layers-container > * {
-    height: 20%;
+	height: 20%
 }
-
 #progress-bar {
-    height: 4%;
-    width: 100%;
-    background-color: #3c3c3c;
+	height: 4%;
+	width: 100%;
+	background-color: #3c3c3c
 }
-
 #progress-bar > #progress {
-    height: 100%;
-    width: 0;
-    background-color: #850b0b;
-    transition: width 0.1s linear;
+	height: 100%;
+	width: 0;
+	background-color: #850b0b;
+	transition: width 0.1s linear
 }
-
 #melos {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
+	display: flex;
+	flex-direction: row;
+	width: 80%
 }
 .single-size-fieldset {
-    width: 80%;
+	width: 80%
 }
-
-.double-size-fieldset {
-    width: 35%;
-}
-
 #melo1 {
-    width: 100%;
-    margin: 0 2.5% 0 0;
+	width: 100%;
+	margin: 0 2.5% 0 0
 }
-
 #melo2 {
-    width: 100%;
-    margin: 0 0 0 2.5%;
+	width: 100%;
+	margin: 0 0 0 2.5%
 }
-
 fieldset {
-    border: 1px solid #000;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	border: 1px solid #000;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center
 }
-
 legend {
-    font-size: 1.5em;
-    font-weight: bold;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-
-    background-color: inherit;
-    border-radius: 10px;
-    padding: 0 10px;
-
-    border: 1px solid #000;
-    border-bottom: 0;
+	font-size: 1.5em;
+	font-weight: bold;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: inherit;
+	border-radius: 10px;
+	padding: 0 10px;
+	border: 1px solid #000;
+	border-bottom: 0
 }
-
 select {
-    width: auto;
-    text-align-last: center;
-    height: 50%;
+	width: auto;
+	text-align-last: center;
+	height: 50%
 }
-
 #volume-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center
 }
-
 input[type="range"] {
 	font-size: 1.5rem;
-	width: 7em;
+	width: 7em
 }
-
 input[type="range"] {
 	color: #ef233c;
 	--thumb-height: 0.8em;
@@ -201,180 +166,127 @@ input[type="range"] {
 	--track-color: rgba(0, 0, 0, 0.2);
 	--brightness-hover: 180%;
 	--brightness-down: 80%;
-	--clip-edges: 0.125em;
+	--clip-edges: 0.125em
 }
-/* === range commons === */
+/* range */
 input[type="range"] {
 	position: relative;
 	background: #fff0;
-	overflow: hidden;
+	overflow: hidden
 }
-
 input[type="range"]:active {
-	cursor: grabbing;
+	cursor: grabbing
 }
-
 input[type="range"]:disabled {
 	filter: grayscale(1);
 	opacity: 0.3;
-	cursor: not-allowed;
+	cursor:not-allowed
 }
-
-/* === WebKit specific styles === */
-input[type="range"],
-input[type="range"]::-webkit-slider-runnable-track,
-input[type="range"]::-webkit-slider-thumb {
+/* WebKit */
+input[type="range"],input[type="range"]::-webkit-slider-runnable-track,input[type="range"]::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	transition: all ease 100ms;
-	height: var(--thumb-height);
+	height: var(--thumb-height)
 }
-
-input[type="range"]::-webkit-slider-runnable-track,
-input[type="range"]::-webkit-slider-thumb {
-	position: relative;
+input[type="range"]::-webkit-slider-runnable-track,input[type="range"]::-webkit-slider-thumb {
+	position: relative
 }
-
-
 input[type="range"]::-webkit-slider-thumb {
 	--thumb-radius: calc((var(--thumb-height) * 0.5) - 1px);
 	--clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 0.5px);
 	--clip-bottom: calc(var(--thumb-height) - var(--clip-top));
 	--clip-further: calc(100% + 1px);
-	--box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0
-		100vmax currentColor;
-
+	--box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0100vmax currentColor;
 	width: var(--thumb-width, var(--thumb-height));
-	background: linear-gradient(currentColor 0 0) scroll no-repeat left center /
-		50% calc(var(--track-height) + 1px);
+	background: linear-gradient(currentColor 0 0) scroll no-repeat left center /50% calc(var(--track-height) + 1px);
 	background-color: currentColor;
 	box-shadow: var(--box-fill);
 	border-radius: var(--thumb-width, var(--thumb-height));
-
 	filter: brightness(100%);
-	clip-path: polygon(
-		100% -1px,
-		var(--clip-edges) -1px,
-		0 var(--clip-top),
-		-100vmax var(--clip-top),
-		-100vmax var(--clip-bottom),
-		0 var(--clip-bottom),
-		var(--clip-edges) 100%,
-		var(--clip-further) var(--clip-further)
-	);
+	clip-path: polygon(100% -1px,var(--clip-edges) -1px,0 var(--clip-top),-100vmax var(--clip-top),-100vmax var(--clip-bottom),0 var(--clip-bottom),var(--clip-edges) 100%,var(--clip-further) var(--clip-further))
 }
-
 input[type="range"]:hover::-webkit-slider-thumb {
 	filter: brightness(var(--brightness-hover));
-	cursor: grab;
+	cursor: grab
 }
-
 input[type="range"]:active::-webkit-slider-thumb {
 	filter: brightness(var(--brightness-down));
-	cursor: grabbing;
+	cursor: grabbing
 }
-
 input[type="range"]::-webkit-slider-runnable-track {
-	background: linear-gradient(var(--track-color) 0 0) scroll no-repeat center /
-		100% calc(var(--track-height) + 1px);
+	background: linear-gradient(var(--track-color) 0 0) scroll no-repeat center /100% calc(var(--track-height) + 1px)
 }
-
 input[type="range"]:disabled::-webkit-slider-thumb {
-	cursor: not-allowed;
+	cursor:not-allowed
 }
-
-/* === Firefox specific styles === */
-input[type="range"],
-input[type="range"]::-moz-range-track,
-input[type="range"]::-moz-range-thumb {
+/* Firefox */
+input[type="range"],input[type="range"]::-moz-range-track,input[type="range"]::-moz-range-thumb {
 	appearance: none;
 	transition: all ease 100ms;
-	height: var(--thumb-height);
+	height: var(--thumb-height)
 }
-
-input[type="range"]::-moz-range-track,
-input[type="range"]::-moz-range-thumb,
-input[type="range"]::-moz-range-progress {
-	background: #fff0;
+input[type="range"]::-moz-range-track,input[type="range"]::-moz-range-thumb,input[type="range"]::-moz-range-progress {
+	background: #fff0
 }
-
 input[type="range"]::-moz-range-thumb {
 	background: currentColor;
 	border: 0;
 	width: var(--thumb-width, var(--thumb-height));
 	border-radius: var(--thumb-width, var(--thumb-height));
-	cursor: grab;
+	cursor: grab
 }
-
 input[type="range"]:active::-moz-range-thumb {
-	cursor: grabbing;
+	cursor: grabbing
 }
-
 input[type="range"]::-moz-range-track {
 	width: 100%;
-	background: var(--track-color);
+	background: var(--track-color)
 }
-
 input[type="range"]::-moz-range-progress {
 	appearance: none;
 	background: currentColor;
-	transition-delay: 30ms;
+	transition-delay: 30ms
 }
-
-input[type="range"]::-moz-range-track,
-input[type="range"]::-moz-range-progress {
+input[type="range"]::-moz-range-track,input[type="range"]::-moz-range-progress {
 	height: calc(var(--track-height) + 1px);
-	border-radius: var(--track-height);
+	border-radius: var(--track-height)
 }
-
-input[type="range"]::-moz-range-thumb,
-input[type="range"]::-moz-range-progress {
-	filter: brightness(100%);
+input[type="range"]::-moz-range-thumb,input[type="range"]::-moz-range-progress {
+	filter: brightness(100%)
 }
-
-input[type="range"]:hover::-moz-range-thumb,
-input[type="range"]:hover::-moz-range-progress {
-	filter: brightness(var(--brightness-hover));
+input[type="range"]:hover::-moz-range-thumb,input[type="range"]:hover::-moz-range-progress {
+	filter: brightness(var(--brightness-hover))
 }
-
-input[type="range"]:active::-moz-range-thumb,
-input[type="range"]:active::-moz-range-progress {
-	filter: brightness(var(--brightness-down));
+input[type="range"]:active::-moz-range-thumb,input[type="range"]:active::-moz-range-progress {
+	filter: brightness(var(--brightness-down))
 }
-
 input[type="range"]:disabled::-moz-range-thumb {
-	cursor: not-allowed;
+	cursor:not-allowed
 }
-
 @media screen and (max-width: 1050px) {
-   #dummy {
-       display: none;
-   }
-
-   #buttons {
-       width: 75%;
-   }
+	#dummy {
+		display: none
+	}
+	#buttons {
+		width: 75%
+	}
 }
-
 @media screen and (max-width: 675px) {
-
-    #ctrl-container {
-        flex-direction: column;
-        height: 25%;
-    }
-
-    #ctrl-container > #dummy, #ctrl-container > #volume-container {
-        width: 100%;
-        margin: 0;
-    }
-
-    #buttons {
-        width: 100%;
-    }
+	#ctrl-container {
+		flex-direction: column;
+		height: 25%
+	}
+	#ctrl-container > #dummy, #ctrl-container > #volume-container {
+		width: 100%;
+		margin: 0
+	}
+	#buttons {
+		width: 100%
+	}
 }
-
 @media screen and (max-width: 500px) {
-    #main {
-        margin: 0;
-        height: 100%;
-    }
+	#main {
+		margin: 0;
+		height: 100%
+	}
 }
