@@ -2,10 +2,11 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #1e1e1e;
 }
 
 * {
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 #main {
@@ -28,8 +29,9 @@ html, body {
 
 #controls {
     display: flex;
+    flex-direction: column;
     opacity: 1;
-    background-color: #691c1c;
+    background-color: #252526;
 }
 
 #loader {
@@ -38,8 +40,9 @@ html, body {
     align-items: center;
     height: 100%;
     z-index: 1;
-    background-color: white;
+    background-color: #252526;
     pointer-events: none;
+    color: #fff;
 }
 
 .fade-out {
@@ -52,14 +55,14 @@ html, body {
     display: row;
     justify-content: center;
     align-items: center;
-    margin: 0 10px;
+    margin: 10px;
     width: 100%;
 }
 
 #buttons > button {
     margin: 0 10px;
     background-color: rgb(255, 255, 255);
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 button, .btn-icon {
@@ -72,5 +75,100 @@ button, .btn-icon {
 }
 
 .btn-activated {
-    background-color: #acacac !important;
+    background-color: #8a8a8a !important;
+}
+
+#gui {
+    /* make it take all available height space */
+    height: 100%;
+    width: 100%;
+}
+
+#layers-container {
+    height: 96%;
+    width: 100%;
+    background-color: #252526;
+    display: flex;
+    flex-direction: column;
+    /* Center child on y-axis and x*/
+    justify-content: space-evenly;
+    align-items: center;
+
+    /* sahdow */
+    box-shadow: 0 0 10px 5px #000;
+}
+
+/* #layers-container direct 3 childs */
+#layers-container > * {
+    height: 20%;
+}
+
+#progress-bar {
+    height: 4%;
+    width: 100%;
+    background-color: #3c3c3c;
+}
+
+#progress-bar > #progress {
+    height: 100%;
+    width: 0;
+    background-color: #850b0b;
+    transition: width 0.1s linear;
+}
+
+#melos {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+.single-size-fieldset {
+    width: 80%;
+}
+
+.double-size-fieldset {
+    width: 35%;
+}
+
+#melo1 {
+    width: 100%;
+    margin: 0 2.5% 0 0;
+}
+
+#melo2 {
+    width: 100%;
+    margin: 0 0 0 2.5%;
+}
+
+fieldset {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: inherit;
+    border-radius: 10px;
+    padding: 0 10px;
+
+    border: 1px solid #000;
+    border-bottom: 0;
+}
+
+/* Center fieldset > select */
+select {
+    width: auto;
+    text-align-last: center;
+    height: 50%;
 }

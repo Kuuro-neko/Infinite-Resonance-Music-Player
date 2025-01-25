@@ -10,6 +10,47 @@
     <div id="main">
         <div id="loader"><p>Loading... 0%</p></div>
         <div id="controls">
+            <div id="gui">
+                <div id="layers-container">
+                    <div id="melos" class="single-size-fieldset">
+                        <fieldset id="melo1">
+                            <legend>Melody 1</legend>
+                            <select class="style-select" onchange="changeStylesFromUserInput()">
+                                <option value="1">Medieval</option>
+                                <option value="2">Modern</option>
+                                <option value="3">Sci-Fi</option>
+                            </select>
+                        </fieldset>
+                        <fieldset id="melo2">
+                            <legend>Melody 2</legend>
+                            <select class="style-select" onchange="changeStylesFromUserInput()">
+                                <option value="1">Medieval</option>
+                                <option value="2">Modern</option>
+                                <option value="3">Sci-Fi</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    <fieldset id="perc" class="single-size-fieldset">
+                        <legend>Percussion</legend>
+                        <select class="style-select" onchange="changeStylesFromUserInput()">
+                            <option value="1">Medieval</option>
+                            <option value="2">Modern</option>
+                            <option value="3">Sci-Fi</option>
+                        </select>
+                    </fieldset>
+                    <fieldset id="acc" class="single-size-fieldset">
+                        <legend>Accompaniment</legend>
+                        <select class="style-select" onchange="changeStylesFromUserInput()">
+                            <option value="1">Medieval</option>
+                            <option value="2">Modern</option>
+                            <option value="3">Sci-Fi</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div id="progress-bar">
+                    <div id="progress"></div>
+                </div>
+            </div>
             <div id="buttons">
                 <button id="play" class="control-button" onclick="playSounds()">
                     <img src="img/play.svg" alt="play" class="btn-icon">
