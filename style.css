@@ -79,7 +79,6 @@ button, .btn-icon {
 }
 
 #gui {
-    /* make it take all available height space */
     height: 100%;
     width: 100%;
 }
@@ -90,15 +89,11 @@ button, .btn-icon {
     background-color: #252526;
     display: flex;
     flex-direction: column;
-    /* Center child on y-axis and x*/
     justify-content: space-evenly;
     align-items: center;
-
-    /* sahdow */
     box-shadow: 0 0 10px 5px #000;
 }
 
-/* #layers-container direct 3 childs */
 #layers-container > * {
     height: 20%;
 }
@@ -166,7 +161,6 @@ legend {
     border-bottom: 0;
 }
 
-/* Center fieldset > select */
 select {
     width: auto;
     text-align-last: center;
