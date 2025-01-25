@@ -123,6 +123,8 @@ function stopSounds() {
     for (let i = 0; i < sounds.length; i++) {
         sounds[i].stop();
     }
+    progress = 0;
+    document.getElementById('progress').style.width = `${progress}%`;
 }
 
 function loopSounds() {
