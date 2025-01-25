@@ -76,6 +76,13 @@ const Layers = {
     ACC: 3
 };
 
+function changeVolume() {
+    volume = document.getElementById('volume').value / 100;
+    for (let i = 0; i < stylesToPlay.length; i++) {
+        sounds[getSoundIndex(stylesToPlay[i], i)].volume(volume);
+    }
+}
+
 function pauseSounds() {
     playing = false;
     paused = true;

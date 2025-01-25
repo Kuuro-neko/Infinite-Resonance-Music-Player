@@ -52,22 +52,29 @@
                     <div id="progress"></div>
                 </div>
             </div>
-            <div id="buttons">
-                <button id="play" class="control-button" onclick="playSounds()">
-                    <img src="img/play.svg" alt="play" class="btn-icon">
+            <div id="ctrl-container">
+                <div id="dummy"></div>
+                <div id="buttons">
+                    <button id="play" class="control-button" onclick="playSounds()">
+                        <img src="img/play.svg" alt="play" class="btn-icon">
+                    </button>
+                    <button id="pause" class="control-button" onclick="pauseSounds()">
+                        <img src="img/pause.svg" alt="pause" class="btn-icon">
+                    </button>
+                    <button id="stop" class="control-button" onclick="stopSounds()">
+                        <img src="img/stop.svg" alt="stop" class="btn-icon">
+                    </button>
+                    <button id="loop" class="control-button" onclick="loopSounds()">
+                        <img src="img/loop.svg" alt="loop" class="btn-icon">
+                    </button>
+                    <button id="shuffle" class="control-button" onclick="shuffleSounds()">
+                        <img src="img/shuffle.svg" alt="shuffle" class="btn-icon">
                 </button>
-                <button id="pause" class="control-button" onclick="pauseSounds()">
-                    <img src="img/pause.svg" alt="pause" class="btn-icon">
-                </button>
-                <button id="stop" class="control-button" onclick="stopSounds()">
-                    <img src="img/stop.svg" alt="stop" class="btn-icon">
-                </button>
-                <button id="loop" class="control-button" onclick="loopSounds()">
-                    <img src="img/loop.svg" alt="loop" class="btn-icon">
-                </button>
-                <button id="shuffle" class="control-button" onclick="shuffleSounds()">
-                    <img src="img/shuffle.svg" alt="shuffle" class="btn-icon">
-                </button>
+                </div>
+                <div id="volume-container">
+                    <img src="img/volume.svg" alt="volume" class="vol-icon" id="vol-icon">
+                    <input type="range" id="volume" class="control-button" min="0" max="100" value="50" oninput="changeVolume()">
+                </div>
             </div>
         </div>
     </div>
