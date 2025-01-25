@@ -10,6 +10,7 @@ let duration = 64000;
 let playing = false;
 let progress = 0;
 let startTime;
+let paused = false;
 
 let styleColors = [
     '#1fb52b', // MED
@@ -77,8 +78,18 @@ const Layers = {
 
 function pauseSounds() {
     playing = false;
+    paused = true;
     for (let i = 0; i < sounds.length; i++) {
         sounds[i].pause();
+    }
+}
+
+function resumeSounds() {
+    playing = true;
+    paused = false;
+    startTime = new Date().getTime() - progress / 100 * duration;
+    for (let i = 0; i < sounds.length; i++) {
+        sounds[i].play();
     }
 }
 
@@ -86,6 +97,11 @@ function playSounds() {
     if (playing) {
         stopSounds();
     }
+    if (paused) {
+        resumeSounds();
+        return;
+    }
+    paused = false;
     playing = true;
     progress = 0;
     startTime = new Date().getTime();
