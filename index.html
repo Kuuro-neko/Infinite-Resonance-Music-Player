@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <div id="loader"><p>Loading... 0%</p></div>
+        <div id="controls">
+            <div id="buttons">
+                <button id="play" class="control-button" onclick="playSounds()">
+                    <img src="img/play.svg" alt="play" class="btn-icon">
+                </button>
+                <button id="pause" class="control-button" onclick="pauseSounds()">
+                    <img src="img/pause.svg" alt="pause" class="btn-icon">
+                </button>
+                <button id="stop" class="control-button" onclick="stopSounds()">
+                    <img src="img/stop.svg" alt="stop" class="btn-icon">
+                </button>
+                <button id="loop" class="control-button" onclick="loopSounds()">
+                    <img src="img/loop.svg" alt="loop" class="btn-icon">
+                </button>
+                <button id="shuffle" class="control-button" onclick="shuffleSounds()">
+                    <img src="img/shuffle.svg" alt="shuffle" class="btn-icon">
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js" integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="player.js"></script>
+</body>
+</html>

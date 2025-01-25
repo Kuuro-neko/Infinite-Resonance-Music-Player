@@ -1,0 +1,76 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    overflow-y: hidden;
+}
+
+#main {
+    position: relative;
+    margin: 2%;
+    height: 92%;
+    border: 1px solid #000;
+}
+
+#controls, #loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#controls {
+    display: flex;
+    opacity: 1;
+    background-color: #691c1c;
+}
+
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    z-index: 1;
+    background-color: white;
+    pointer-events: none;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+}
+
+#buttons {
+    display: flex;
+    display: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    width: 100%;
+}
+
+#buttons > button {
+    margin: 0 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+button, .btn-icon {
+    cursor: pointer !important;
+}
+
+.btn-icon {
+    height: 50px;
+    margin: 5px;
+}
+
+.btn-activated {
+    background-color: #acacac !important;
+}
