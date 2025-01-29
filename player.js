@@ -168,14 +168,22 @@ function enableStyles(stylesToPlay) {
     changeUserInputFromShuffle();
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 function updateLoader() {
-    let loader = document.getElementById('loader');
+    let loader = document.getElementById('loader-text');
     let percentage = Math.round((loadedSounds / totalSounds) * 100);
-    loader.childNodes[0].innerText = `Loading... ${percentage}%`;
+    loader.innerText = `Loading... ${percentage}%`;
+    let charNode = document.getElementById('char');
+    charNode.style.marginLeft = `${percentage*0.9}%`;
     if (loadedSounds === totalSounds) {
-        loader.childNodes[0].innerText = 'Loading complete!';
-        loader.classList.add('fade-out');
         enableStyles(stylesToPlay);
+        loader.innerText = 'Loading complete!';
+        sleep(350).then(() => {
+            loader.parentNode.classList.add('fade-out');
+        });
     }
 }
 
